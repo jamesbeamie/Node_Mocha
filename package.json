@@ -16,10 +16,19 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
+    "coveralls": "^3.1.1",
+    "jest": "^27.4.7",
     "mocha": "^2.4.5"
   },
   "scripts": {
     "start": "node index.js",
     "test": "mocha --timeout 10000"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!data/keyMap.js",
+      "!/node_modules/"
+    ]
   }
 }
